@@ -1,0 +1,90 @@
+/* Dashboard.css */
+
+/* Sidebar */
+
+/* Dashboard.css or your custom CSS file */
+.sidebar a {
+  text-decoration: none; /* Remove underline */
+  color: inherit; /* Inherit the color from parent */
+}
+
+
+.sidebar {
+  background-color: #222;
+  color: #fff;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  margin: 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.sidebar ul {
+  padding: 0;
+  list-style-type: none;
+  flex-grow: 1;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  border-bottom: 1px solid #333; 
+  margin-bottom: 10px; /* Add space between list items */
+}
+
+.sidebar ul li:last-child {
+  border-bottom: none; /* Remove underline for last item */
+  margin-bottom: 0; /* No space for last item */
+}
+
+.sidebar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Add hover transition */
+}
+
+
+.sidebar ul li a svg {
+  margin-right: 10px;
+}
+
+/* Move logout to bottom */
+.logout-link {
+  margin-top: auto;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Content */
+.content {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+  }
+  .sidebar h2 {
+    display: none;
+  }
+  .sidebar ul li a {
+    justify-content: center;
+  }
+  .content {
+    margin-left: 80px;
+  }
+}
